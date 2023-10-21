@@ -1,4 +1,4 @@
-% Марьян Александр Олегович(М8О-213Б-22)(№13).
+% РњР°СЂСЊСЏРЅ РђР»РµРєСЃР°РЅРґСЂ РћР»РµРіРѕРІРёС‡(Рњ8Рћ-213Р‘-22)(в„–13).
 
 length_f([], 0).
 length_f([_|T], N) :-
@@ -22,7 +22,7 @@ remove_f(X, [H|T], [H|NewT]) :-
 
 permute_f([], []).
 permute_f(L, [X | T]) :-
-    select(X, L, R), % Выбираем X из L и возвращаем R (L без X)
+    select(X, L, R), % Р’С‹Р±РёСЂР°РµРј X РёР· L Рё РІРѕР·РІСЂР°С‰Р°РµРј R (L Р±РµР· X)
     permute_f(R, T).
 
 sublist_f([],[]).
@@ -48,7 +48,7 @@ max_f([H|Tail], Max, Index) :-
 max_f([], -9999, -1).
 
 
-find_perm_shortened_arr(List,Perm) :- % Получаем список до Max, и находим все перестановки такого списка.
+find_perm_shortened_arr(List,Perm) :- % РџРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє РґРѕ Max, Рё РЅР°С…РѕРґРёРј РІСЃРµ РїРµСЂРµСЃС‚Р°РЅРѕРІРєРё С‚Р°РєРѕРіРѕ СЃРїРёСЃРєР°.
     max_f(List,_,Index),
     func4(List,Index,TruncatedList),
     permute_f(TruncatedList,Perm).
