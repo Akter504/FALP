@@ -41,14 +41,17 @@ func4(Tail, Length, List1) :-
     append(List1, _, Tail).
 
 %Variant(N+5) mod 20 + 1
-max_f([H|Tail], Max, Index) :-
+max_f_without_stdrd_prdt([H|Tail], Max, Index) :-
     max_f(Tail, TempMax, TempIndex),
     (H > TempMax -> (Max = H, Index = 0); (Max = TempMax, Index is TempIndex + 1)).
 
-max_f([], -9999, -1).
+max_f_without_stdrd_prdt([], -9999, -1).
 
+max_f(List, Max, Index) :-
+    nth0(Index, List, Max),   % Находим индекс максимального элемента
+    max_list(List, Max).
 
 find_perm_shortened_arr(List,Perm) :- % Получаем список до Max, и находим все перестановки такого списка.
-    max_f(List,_,Index),
+    max_f_without_stdrd_prdt(List,_,Index),
     func4(List,Index,TruncatedList),
     permute_f(TruncatedList,Perm).
