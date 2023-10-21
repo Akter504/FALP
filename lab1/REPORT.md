@@ -112,7 +112,7 @@ find_perm_shortened_arr(List,Perm) :- % Получаем список до Max, 
 
 Запуск программы:
 ```prolog
-print_all.
+?- print_all.
 
 ```
 Результат работы программы(Файл two.pl):
