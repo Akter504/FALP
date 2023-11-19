@@ -28,6 +28,14 @@
 
 ## Принцип решения
 ```prolog
+god('T').
+
+god('L').
+
+god('D').
+```
+Создание объектов, 'T'- бог правды, 'L' - бог лжи, 'D'- бог дипломатии.
+```prolog
 testimony('T',X,X).
 testimony('L',X,Y):- not(X=Y).
 testimony('D',_,_).
