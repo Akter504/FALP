@@ -74,9 +74,9 @@ solve:-
 	writeln('Iterative'),
 	iter_search(In, Out),
 
-	writeln('DFS'),
+	writeln('DPTH'),
 	dpth_search(In, Out),
 
-	writeln('BFS'),
+	writeln('BDTH'),
 	bdth_search(In,Out),
         !.
